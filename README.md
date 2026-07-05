@@ -1,4 +1,4 @@
-# Karavan Sarai — Hotel Landing Page
+# Zahid Inn — Hotel Landing Page
 
 A Vite + vanilla JS static multi-page site, converted from a Claude design export (`.dc.html` files) into plain HTML/CSS/JS.
 
