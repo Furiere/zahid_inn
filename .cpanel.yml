@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/zahid-inn/public_html/
+    - /bin/cp -R dist/* $DEPLOYPATH
