@@ -215,12 +215,26 @@
 .rate-card .ph {
   height: 200px;
 }
+.rate-photo {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+.rate-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .rate-body {
   padding: 26px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   flex: 1;
+}
+.rate-body .btn {
+  width: 100px
 }
 .rate-body h3 {
   font-family: "Cormorant Garamond", serif;
