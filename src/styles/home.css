@@ -5,10 +5,7 @@
       oklch(20% 0.02 55 / 0.65),
       oklch(20% 0.02 55 / 0.65)
     ),
-    image-set(
-      url("/images/webp/hero/zahid_hero_background.webp") type("image/webp"),
-      url("/images/jpeg/hero/zahid_hero_background.jpg") type("image/jpeg")
-    );
+    url("/images/webp/hero/zahid_hero_background.webp");
   background-size: cover;
   background-position: center;
 }
