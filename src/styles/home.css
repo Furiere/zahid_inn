@@ -436,25 +436,25 @@
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 20px;
   margin-bottom: 28px;
 }
 .trust-card {
   text-align: center;
-  padding: 32px 20px;
-  border: 1px solid var(--line);
+  padding: 8px 6px;
+  border: 0px solid var(--line);
   border-radius: 2px;
   background: var(--cream);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 .trust-rating {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 64px;
+  height: 128px;
 }
 .trust-rating img {
   max-height: 100%;
