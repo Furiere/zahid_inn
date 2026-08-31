@@ -4,7 +4,13 @@
       "Bash(cd /var/home/dboldin/Documents/Projects/zahid_inn && mkdir -p en ru src/styles src/js public && ls)",
       "Bash(npm install *)",
       "Bash(rm -f /tmp/landing.css /tmp/rooms.css /tmp/contacts.css)",
-      "WebFetch(domain:docs.cpanel.net)"
+      "WebFetch(domain:docs.cpanel.net)",
+      "Bash(timeout 8 npx vite --port 5180)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5180/en/)",
+      "Bash(curl -s http://localhost:5180/en/)",
+      "Read(//tmp/**)",
+      "Bash(npm -v)",
+      "Bash(grep -nE \">[A-Za-z][A-Za-z ,'&$/-]*<\" index.html)"
     ],
     "additionalDirectories": [
       "/var/home/dboldin/Documents/Projects/zahid_inn",
