@@ -17,7 +17,9 @@
       "Read(//var/home/dboldin/.nvm/versions/node/**)",
       "Read(//usr/local/bin/**)",
       "Bash(python3 /tmp/claude-1000/-var-home-dboldin-Documents-Projects-zahid-inn/f0ef1b65-ac01-4d1d-951b-117000f8b318/scratchpad/apply.py)",
-      "Bash(python3 /tmp/claude-1000/-var-home-dboldin-Documents-Projects-zahid-inn/f0ef1b65-ac01-4d1d-951b-117000f8b318/scratchpad/apply2.py)"
+      "Bash(python3 /tmp/claude-1000/-var-home-dboldin-Documents-Projects-zahid-inn/f0ef1b65-ac01-4d1d-951b-117000f8b318/scratchpad/apply2.py)",
+      "Bash(python3 /tmp/claude-1000/-var-home-dboldin-Documents-Projects-zahid-inn/6a84dab9-e6f2-4034-935d-e558e59e18b4/scratchpad/dropjpeg.py)",
+      "Bash(npm run *)"
     ],
     "additionalDirectories": [
       "/var/home/dboldin/Documents/Projects/zahid_inn",
