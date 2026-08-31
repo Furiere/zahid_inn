@@ -1,6 +1,19 @@
 .hero {
   position: relative;
   padding: 88px 40px 100px;
+  background-image: linear-gradient(
+      oklch(20% 0.02 55 / 0.65),
+      oklch(20% 0.02 55 / 0.65)
+    ),
+    image-set(
+      url("/images/webp/hero/zahid_header_background.webp") type("image/webp"),
+      url("/images/jpeg/hero/zahid_header_background.jpg") type("image/jpeg")
+    );
+  background-size: cover;
+  background-position: center;
+}
+.hero .eyebrow {
+  color: oklch(90% 0.05 75);
 }
 .hero-in {
   max-width: 1160px;
@@ -23,11 +36,12 @@
   line-height: 1.05;
   margin: 0 0 20px;
   font-weight: 600;
+  color: oklch(99% 0 0);
 }
 .hero p {
   font-size: 18px;
   line-height: 1.6;
-  color: var(--inksoft);
+  color: oklch(94% 0.01 75);
   max-width: 46ch;
   margin: 0 0 32px;
 }
@@ -285,6 +299,250 @@
   margin: 0;
   max-width: 50ch;
 }
+/* Block 1 — hero quick room search bar */
+.hero-search {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--cream);
+  overflow: hidden;
+  max-width: 560px;
+}
+.hero-search .field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 16px;
+  flex: 1 1 130px;
+  border-right: 1px solid var(--line);
+}
+.hero-search .field label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--inksoft);
+  font-weight: 600;
+}
+.hero-search .field input,
+.hero-search .field select {
+  border: none;
+  background: none;
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  padding: 0;
+  width: 100%;
+}
+.hero-search .field input:focus,
+.hero-search .field select:focus {
+  outline: none;
+}
+.hero-search button {
+  border: none;
+  background: var(--terra);
+  color: oklch(98% 0.01 85);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0 26px;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  flex: 0 0 auto;
+}
+.hero-search button:hover {
+  background: var(--terradark);
+}
+
+/* Block 2 — concept & atmosphere */
+.concept {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.concept-media {
+  aspect-ratio: 4/5;
+}
+.concept-copy .eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--terra);
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+.concept-copy h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  margin: 0 0 20px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.concept-copy p {
+  color: var(--inksoft);
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 0 18px;
+  max-width: 52ch;
+}
+
+/* Block 4 — awards & trust */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.trust-card {
+  text-align: center;
+  padding: 32px 20px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.trust-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+}
+.trust-rating img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+}
+.trust-award img {
+  max-height: 44px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+}
+.trust-card b {
+  font-size: 16px;
+  font-weight: 600;
+}
+.trust-card span {
+  font-size: 13px;
+  color: var(--inksoft);
+}
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.trust-badge {
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 10px 18px;
+  font-size: 13px;
+  color: var(--inksoft);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.trust-badge .diamond {
+  width: 8px;
+  height: 8px;
+}
+
+/* Block 8 — guest reviews */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.review-card {
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 28px;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.review-stars {
+  color: var(--terra);
+  letter-spacing: 3px;
+  font-size: 15px;
+}
+.review-quote {
+  min-height: 84px;
+  align-items: flex-start;
+  text-align: left;
+  padding: 14px;
+}
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 10px;
+  flex: none;
+}
+.review-author b {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+.review-author span {
+  font-size: 12px;
+  color: var(--inksoft);
+}
+
+/* Block 9 — FAQ */
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+.faq-item summary {
+  cursor: pointer;
+  padding: 22px 0;
+  font-size: 17px;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: "+";
+  font-size: 24px;
+  line-height: 1;
+  color: var(--terra);
+  flex: none;
+}
+.faq-item[open] summary::after {
+  content: "–";
+}
+.faq-item p {
+  margin: 0 0 22px;
+  color: var(--inksoft);
+  line-height: 1.65;
+  font-size: 15px;
+  max-width: 68ch;
+}
+
 .offer-popup {
   position: fixed;
   bottom: 24px;
@@ -355,6 +613,19 @@
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 140px;
   }
+  .concept {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .concept-media {
+    aspect-ratio: 16/10;
+  }
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 680px) {
   .hero {
@@ -368,5 +639,18 @@
     right: 16px;
     width: auto;
     bottom: 16px;
+  }
+  .hero-search {
+    flex-direction: column;
+  }
+  .hero-search .field {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-search button {
+    padding: 14px;
+  }
+  .trust-grid {
+    grid-template-columns: 1fr;
   }
 }
