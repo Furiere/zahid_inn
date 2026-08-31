@@ -80,13 +80,14 @@ body {
   background: var(--terradark);
 }
 .btn-outline {
-  background: transparent;
-  color: var(--ink);
+  background: var(--ink);
+  color: oklch(98% 0.01 85);
   border-color: var(--ink);
 }
 .btn-outline:hover {
-  background: var(--ink);
-  color: var(--cream);
+  background: var(--inksoft);
+  border-color: var(--inksoft);
+  color: oklch(98% 0.01 85);
 }
 .btn-sm {
   padding: 9px 18px;
