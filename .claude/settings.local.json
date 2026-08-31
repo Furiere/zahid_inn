@@ -10,7 +10,14 @@
       "Bash(curl -s http://localhost:5180/en/)",
       "Read(//tmp/**)",
       "Bash(npm -v)",
-      "Bash(grep -nE \">[A-Za-z][A-Za-z ,'&$/-]*<\" index.html)"
+      "Bash(grep -nE \">[A-Za-z][A-Za-z ,'&$/-]*<\" index.html)",
+      "Bash(cd /var/home/dboldin/Documents/Projects/zahid_inn/public/images/jpeg/rooms/comfort; ls -1b; echo \"---triple---\"; ls -1b ../triple)",
+      "Read(//var/home/dboldin/Documents/Projects/**)",
+      "Bash(command -v node npm)",
+      "Read(//var/home/dboldin/.nvm/versions/node/**)",
+      "Read(//usr/local/bin/**)",
+      "Bash(python3 /tmp/claude-1000/-var-home-dboldin-Documents-Projects-zahid-inn/f0ef1b65-ac01-4d1d-951b-117000f8b318/scratchpad/apply.py)",
+      "Bash(python3 /tmp/claude-1000/-var-home-dboldin-Documents-Projects-zahid-inn/f0ef1b65-ac01-4d1d-951b-117000f8b318/scratchpad/apply2.py)"
     ],
     "additionalDirectories": [
       "/var/home/dboldin/Documents/Projects/zahid_inn",
