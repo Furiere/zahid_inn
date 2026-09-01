@@ -1,7 +1,5 @@
 node_modules/
 .DS_Store
 claude_design_export/
-public/images/jpg
-public/images/jpeg
-dist/images/jpg
-dist/images/jpeg
+public/images/
+dist/images/
