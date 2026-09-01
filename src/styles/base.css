@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: var(--cream);
+  background: white /*var(--cream)*/;
   color: var(--ink);
   font-family: "Work Sans", sans-serif;
   --cream: oklch(97% 0.014 85);
