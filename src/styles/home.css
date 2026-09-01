@@ -104,6 +104,10 @@
 .hero-carousel-btn.next {
   right: 12px;
 }
+/* Block containers — white background for each section's content wrap */
+section > .wrap {
+  background: #fff;
+}
 .section-hd {
   display: flex;
   flex-direction: column;
@@ -154,7 +158,7 @@
   color: var(--inksoft);
 }
 .alt-bg {
-  background: var(--cream2);
+  background: white; /*var(--cream2)*/;
 }
 .rates-carousel {
   position: relative;
