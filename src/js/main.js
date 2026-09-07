@@ -4,9 +4,11 @@ import { initOfferPopup } from './offer-popup.js';
 import { initHeroCarousel } from './hero-carousel.js';
 import { initRatesCarousel } from './rates-carousel.js';
 import { initRoomCarousels } from './room-carousel.js';
+import { initTooltips } from './tooltip.js';
 
 initNav();
 initOfferPopup();
 initHeroCarousel();
 initRatesCarousel();
 initRoomCarousels();
+initTooltips();

@@ -1,5 +1,6 @@
 node_modules/
 .DS_Store
 claude_design_export/
+# Source photos: not tracked. They reach the live site through dist/images/,
+# which IS tracked because .cpanel.yml deploys with `cp -R dist/*`.
 public/images/
-dist/images/
