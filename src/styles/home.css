@@ -175,7 +175,7 @@ section > .wrap {
   display: none;
 }
 .rates-track .rate-card {
-  flex: 0 0 calc((100% - 2 * 28px) / 3);
+  flex: 0 0 562px;
   scroll-snap-align: start;
 }
 .rates-carousel-btn {
@@ -217,20 +217,19 @@ section > .wrap {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  width: 562px;
+  max-width: 100%;
 }
 .rate-card .ph {
-  height: 200px;
+  height: 420px;
 }
 .rate-photo {
   display: block;
-  width: 100%;
-  height: 200px;
-}
-.rate-photo img {
-  width: 100%;
-  height: 100%;
+  width: 560px;
+  height: 420px;
+  max-width: 100%;
   object-fit: cover;
-  display: block;
 }
 .rate-body {
   padding: 26px;
@@ -695,6 +694,10 @@ section > .wrap {
   }
   .rates-track .rate-card {
     flex: 0 0 100%;
+    width: 100%;
+  }
+  .rate-photo {
+    width: 100%;
   }
   .rates-carousel-btn.prev {
     left: 6px;
