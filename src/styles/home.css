@@ -364,6 +364,14 @@ section > .wrap {
   align-items: center;
   gap: 18px;
 }
+.cta-photo {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 2px;
+  margin-bottom: 6px;
+}
 .cta-band h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(28px, 3.2vw, 40px);
