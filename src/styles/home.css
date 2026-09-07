@@ -21,7 +21,7 @@
   align-items: center;
 }
 .eyebrow {
-  font-size: 13px;
+  font-size: var(--fs-base);
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--terra);
@@ -29,14 +29,14 @@
   margin: 0 0 16px;
 }
 .hero h1 {
-  font-size: clamp(38px, 4.6vw, 64px);
+  font-size: clamp(var(--fs-2xl), 4.6vw, var(--fs-5xl));
   line-height: 1.05;
   margin: 0 0 20px;
   font-weight: 600;
   color: oklch(99% 0 0);
 }
 .hero p {
-  font-size: 18px;
+  font-size: var(--fs-h2);
   line-height: 1.6;
   color: oklch(94% 0.01 75);
   max-width: 46ch;
@@ -87,7 +87,7 @@
   border-radius: 50%;
   background: oklch(100% 0 0 / 0.85);
   color: var(--ink);
-  font-size: 18px;
+  font-size: var(--fs-base);
   line-height: 1;
   cursor: pointer;
   display: flex;
@@ -116,13 +116,13 @@ section > .wrap {
   text-align: center;
 }
 .section-hd h2 {
-  font-size: clamp(28px, 3vw, 42px);
+  font-size: var(--fs-lg);
   margin: 0;
   font-weight: 600;
 }
 .section-hd p {
   color: var(--inksoft);
-  font-size: 16px;
+  font-size: var(--fs-lg);
   margin: 0;
 }
 .amenities {
@@ -150,11 +150,11 @@ section > .wrap {
   object-fit: contain;
 }
 .amenity b {
-  font-size: 16px;
+  font-size: var(--fs-h2);
   font-weight: 600;
 }
 .amenity span {
-  font-size: 14px;
+  font-size: var(--fs-base);
   color: var(--inksoft);
 }
 .alt-bg {
@@ -188,7 +188,7 @@ section > .wrap {
   border-radius: 50%;
   background: oklch(100% 0 0 / 0.9);
   color: var(--ink);
-  font-size: 22px;
+  font-size: var(--fs-lg);
   line-height: 1;
   cursor: pointer;
   display: flex;
@@ -239,18 +239,19 @@ section > .wrap {
   flex: 1;
 }
 .rate-body .btn {
-  width: 100px
+  width: 100px;
+  font-size: var(--fs-base);
 }
 .rate-body h3 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 24px;
+  font-size: var(--fs-lg);
   margin: 0;
   font-weight: 600;
 }
 .rate-body p {
   margin: 0;
   color: var(--inksoft);
-  font-size: 14px;
+  font-size: var(--fs-lg);
   line-height: 1.5;
 }
 .rate-price {
@@ -260,15 +261,15 @@ section > .wrap {
   gap: 2px;
   margin-top: auto;
   padding-top: 4px;
-  font-size: 14px;
+  font-size: var(--fs-base);
   color: var(--inksoft);
 }
 .rate-price b {
-  font-size: 26px;
+  font-size: var(--fs-xl);
   font-family: "Cormorant Garamond", serif;
 }
 .rate-price span {
-  font-size: 13px;
+  font-size: var(--fs-sm);
   color: var(--inksoft);
 }
 .neighborhood-grid {
@@ -292,7 +293,7 @@ section > .wrap {
 .pending-note {
   background: var(--sand);
   color: var(--ink);
-  font-size: 12px;
+  font-size: var(--fs-sm);
   font-family: ui-monospace, monospace;
   padding: 6px 12px;
   margin-bottom: 12px;
@@ -300,7 +301,7 @@ section > .wrap {
 }
 .neighborhood-copy p {
   margin: 0 0 16px;
-  font-size: 15px;
+  font-size: var(--fs-lg);
   line-height: 1.6;
   color: var(--inksoft);
 }
@@ -316,7 +317,7 @@ section > .wrap {
   display: flex;
   gap: 10px;
   align-items: baseline;
-  font-size: 15px;
+  font-size: var(--fs-h2);
   line-height: 1.5;
 }
 .neighborhood-copy li .diamond {
@@ -354,6 +355,8 @@ section > .wrap {
   aspect-ratio: 3 / 4;
 }
 .cta-band {
+  position: relative;
+  overflow: hidden;
   background: var(--ink);
   color: var(--cream);
   border-radius: 2px;
@@ -364,22 +367,35 @@ section > .wrap {
   align-items: center;
   gap: 18px;
 }
+/* photo fills the band; ::after darkens it so the copy stays readable */
 .cta-photo {
-  display: block;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  max-width: 520px;
-  height: auto;
-  border-radius: 2px;
-  margin-bottom: 6px;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.cta-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: oklch(20% 0.02 70 / 0.55);
+  z-index: 1;
+}
+.cta-band > :not(.cta-photo) {
+  position: relative;
+  z-index: 2;
 }
 .cta-band h2 {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(28px, 3.2vw, 40px);
+  font-size: var(--fs-lg);
   margin: 0;
   font-weight: 600;
 }
 .cta-band p {
   color: oklch(85% 0.02 70);
+  font-size: var(--fs-lg);
   margin: 0;
   max-width: 50ch;
 }
@@ -404,7 +420,7 @@ section > .wrap {
   border-right: 1px solid var(--line);
 }
 .hero-search .field label {
-  font-size: 11px;
+  font-size: var(--fs-xxs);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--inksoft);
@@ -414,8 +430,8 @@ section > .wrap {
 .hero-search .field select {
   border: none;
   background: none;
-  font-family: "Work Sans", sans-serif;
-  font-size: 14px;
+  font-family: "Cormorant Garamond", sans-serif;
+  font-size: var(--fs-sm);
   color: var(--ink);
   padding: 0;
   width: 100%;
@@ -429,10 +445,10 @@ section > .wrap {
   background: var(--terra);
   color: oklch(98% 0.01 85);
   font-weight: 600;
-  font-size: 14px;
+  font-size: var(--fs-base);
   padding: 0 26px;
   cursor: pointer;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Cormorant Garamond", sans-serif;
   flex: 0 0 auto;
 }
 .hero-search button:hover {
@@ -450,7 +466,7 @@ section > .wrap {
   aspect-ratio: 4/5;
 }
 .concept-copy .eyebrow {
-  font-size: 13px;
+  font-size: var(--fs-base);
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--terra);
@@ -458,14 +474,14 @@ section > .wrap {
   margin: 0 0 16px;
 }
 .concept-copy h2 {
-  font-size: clamp(28px, 3vw, 42px);
+  font-size: var(--fs-lg);
   margin: 0 0 20px;
   font-weight: 600;
   line-height: 1.1;
 }
 .concept-copy p {
   color: var(--inksoft);
-  font-size: 17px;
+  font-size: var(--fs-lg);
   line-height: 1.7;
   margin: 0 0 18px;
   max-width: 52ch;
@@ -510,11 +526,11 @@ section > .wrap {
   display: block;
 }
 .trust-card b {
-  font-size: 16px;
+  font-size: var(--fs-h2);
   font-weight: 600;
 }
 .trust-card span {
-  font-size: 13px;
+  font-size: var(--fs-sm);
   color: var(--inksoft);
 }
 .trust-badges {
@@ -527,7 +543,7 @@ section > .wrap {
   border: 1px solid var(--line);
   border-radius: 2px;
   padding: 10px 18px;
-  font-size: 13px;
+  font-size: var(--fs-sm);
   color: var(--inksoft);
   display: flex;
   align-items: center;
@@ -556,7 +572,7 @@ section > .wrap {
 .review-stars {
   color: var(--terra);
   letter-spacing: 3px;
-  font-size: 15px;
+  font-size: var(--fs-base);
 }
 .review-quote {
   min-height: 84px;
@@ -574,16 +590,16 @@ section > .wrap {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  font-size: 10px;
+  font-size: var(--fs-xs);
   flex: none;
 }
 .review-author b {
   display: block;
-  font-size: 14px;
+  font-size: var(--fs-base);
   font-weight: 600;
 }
 .review-author span {
-  font-size: 12px;
+  font-size: var(--fs-sm);
   color: var(--inksoft);
 }
 .review-card--shot {
@@ -608,7 +624,7 @@ section > .wrap {
 .faq-item summary {
   cursor: pointer;
   padding: 22px 0;
-  font-size: 17px;
+  font-size: var(--fs-h2);
   font-weight: 600;
   list-style: none;
   display: flex;
@@ -621,7 +637,7 @@ section > .wrap {
 }
 .faq-item summary::after {
   content: "+";
-  font-size: 24px;
+  font-size: var(--fs-xl);
   line-height: 1;
   color: var(--terra);
   flex: none;
@@ -633,7 +649,7 @@ section > .wrap {
   margin: 0 0 22px;
   color: var(--inksoft);
   line-height: 1.65;
-  font-size: 15px;
+  font-size: var(--fs-lg);
   max-width: 68ch;
 }
 
@@ -667,11 +683,11 @@ section > .wrap {
   border: none;
   background: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: var(--fs-sm);
   color: var(--inksoft);
 }
 .offer-tag {
-  font-size: 12px;
+  font-size: var(--fs-base);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--terra);
@@ -680,12 +696,12 @@ section > .wrap {
 }
 .offer-popup h3 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 22px;
+  font-size: var(--fs-lg);
   margin: 0 0 10px;
   font-weight: 600;
 }
 .offer-popup p {
-  font-size: 14px;
+  font-size: var(--fs-h2);
   color: var(--inksoft);
   margin: 0 0 16px;
   line-height: 1.5;

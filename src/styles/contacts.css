@@ -1,8 +1,8 @@
 .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
 .info-block{display:flex;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
 .info-block:last-child{border-bottom:none}
-.info-block h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--inksoft);margin:0 0 8px}
-.info-block p{margin:0;font-size:17px;line-height:1.5}
+.info-block h4{font-size:var(--fs-sm);letter-spacing:.1em;text-transform:uppercase;color:var(--inksoft);margin:0 0 8px}
+.info-block p{margin:0;font-size:var(--fs-lg);line-height:1.5}
 .info-block a{color:var(--ink)}
 .map-ph{aspect-ratio:1/1;border-radius:2px}
 .social-row{display:flex;gap:12px;margin-top:8px}

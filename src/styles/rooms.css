@@ -57,7 +57,7 @@
   border-radius: 50%;
   background: oklch(100% 0 0 / 0.85);
   color: var(--ink);
-  font-size: 18px;
+  font-size: var(--fs-base);
   line-height: 1;
   cursor: pointer;
   display: flex;
@@ -80,7 +80,7 @@
 }
 .room-copy .tag {
   display: inline-block;
-  font-size: 12px;
+  font-size: var(--fs-sm);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--terra);
@@ -89,13 +89,13 @@
 }
 .room-copy h2 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 32px;
+  font-size: var(--fs-lg);
   margin: 0 0 12px;
   font-weight: 600;
 }
 .room-copy p {
   color: var(--inksoft);
-  font-size: 15px;
+  font-size: var(--fs-lg);
   line-height: 1.6;
   margin: 0 0 18px;
 }
@@ -106,7 +106,7 @@
   margin-bottom: 20px;
 }
 .room-facts span {
-  font-size: 13px;
+  font-size: var(--fs-base);
   color: var(--inksoft);
   display: flex;
   align-items: center;
@@ -121,10 +121,13 @@
 }
 .room-price b {
   font-family: "Cormorant Garamond", serif;
-  font-size: 30px;
+  font-size: var(--fs-xl);
+}
+.room-copy .btn {
+  font-size: var(--fs-base);
 }
 .room-price span {
-  font-size: 13px;
+  font-size: var(--fs-sm);
   color: var(--inksoft);
 }
 @media (max-width: 900px) {
