@@ -776,3 +776,13 @@ section > .wrap {
     grid-template-columns: 1fr;
   }
 }
+
+/* Keep the promo popup clear of the cookie disclaimer while it is showing */
+body.cookie-visible .offer-popup {
+  bottom: 140px;
+}
+@media (max-width: 720px) {
+  body.cookie-visible .offer-popup {
+    bottom: 190px;
+  }
+}

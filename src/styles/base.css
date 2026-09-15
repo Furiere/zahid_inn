@@ -417,3 +417,60 @@ section {
   width: auto;
   max-width: none;
 }
+
+/* Cookie disclaimer */
+.cookie-notice {
+  position: fixed;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 300;
+  margin: 0 auto;
+  max-width: 1160px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: var(--cream);
+  border: 1.5px solid var(--ink);
+  border-radius: 2px;
+  box-shadow: 0 12px 32px oklch(20% 0.02 55 / 0.18);
+  padding: 20px 24px;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+.cookie-notice.hidden {
+  transform: translateY(24px);
+  opacity: 0;
+  pointer-events: none;
+}
+.cookie-text {
+  flex: 1 1 320px;
+  margin: 0;
+  font-size: var(--fs-base);
+  line-height: 1.5;
+  color: var(--inksoft);
+}
+.cookie-text a {
+  color: var(--terra);
+}
+.cookie-actions {
+  flex: none;
+}
+@media (max-width: 720px) {
+  .cookie-notice {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    gap: 14px;
+    padding: 18px;
+  }
+  .cookie-actions {
+    width: 100%;
+  }
+  .cookie-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
