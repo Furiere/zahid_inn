@@ -1,0 +1,56 @@
+# Zahid Inn
+
+> A 20-room boutique courtyard hotel at 9-13 Asaka 2nd Lane, Tashkent, Uzbekistan.
+> Two low buildings around a pair of shaded courtyards, near the old city centre.
+> Front desk open 24 hours. The site is published in English and Russian.
+
+Booking is handled off-site by OtelMS: https://booking-115047.otelms.com
+
+## Contact
+
+- Address: 9-13 Asaka 2nd Lane, Tashkent, Uzbekistan (RU: Ташкент, 2-й переулок Асака, 9-13)
+- Phone: +998 95 511 11 12
+- Email: zahidinn.2@gmail.com
+- Telegram: https://t.me/zahid-inn_hotel
+- Instagram: https://www.instagram.com/zahid.inn
+- Front desk: open 24 hours, every day
+
+## Rooms and nightly rates
+
+Rates are in Uzbekistani soum (UZS) per night. Tourist tax is not included: it is
+paid separately at 10% of the base calculation value (BCV) per person per night,
+and does not apply to children under 16.
+
+- Single Room — 450,000 UZS
+- Budget Twin Room — 550,000 UZS
+- Double Room — 650,000 UZS
+- Comfort Double Room — 750,000 UZS
+- Comfort Triple Room — 850,000 UZS
+- Two-Room Suite — 1,250,000 UZS
+
+## Amenities
+
+Breakfast, luggage storage, free Wi-Fi throughout, free parking, BBQ area,
+laundry, 24/7 guest kitchen, garden courtyard.
+
+## Guest ratings
+
+- Booking.com: 9.6 / 10 (Traveller Review Awards 2026)
+- Ostrovok: 9.4 / 10 (Guests' Choice 2025)
+- Yandex Travel: 5.0 / 5 (452 reviews)
+- Tripadvisor: 4.9 / 5
+
+## Pages
+
+- [Home (English)](https://zahid-inn.uz/en/): overview, rooms, amenities, neighbourhood, FAQ
+- [Rooms and prices (English)](https://zahid-inn.uz/en/rooms.html): all six room types with photos and rates
+- [Contacts (English)](https://zahid-inn.uz/en/contacts.html): address, phone, email, map
+- [Home (Russian)](https://zahid-inn.uz/ru/)
+- [Rooms and prices (Russian)](https://zahid-inn.uz/ru/rooms.html)
+- [Contacts (Russian)](https://zahid-inn.uz/ru/contacts.html)
+
+## Optional
+
+- [Sitemap](https://zahid-inn.uz/sitemap.xml)
+- Each page also carries schema.org JSON-LD (Hotel, ItemList of HotelRoom with
+  Offer prices, FAQPage, BreadcrumbList) covering the same facts as this file.

@@ -172,9 +172,10 @@
 </head>
 
 <body>
-  <nav class="nav-overlay" id="nav-overlay" aria-label="Main">
+<a class="skip-link" href="#main">Перейти к основному содержанию</a>
+  <nav class="nav-overlay" id="nav-overlay" aria-label="Главное меню">
     <div class="nav-panel">
-      <div class="nav-top"><span class="disp" style="font-size:20px;font-weight:600">Меню</span><button
+      <div class="nav-top"><span class="disp">Меню</span><button
           class="nav-close" id="nav-close" aria-label="Закрыть меню"></button></div><a class="nav-link"
         href="index.html">Главная</a><a class="nav-link" href="rooms.html">Номера</a><a class="nav-link"
         href="contacts.html">Контакты</a><a class="btn btn-primary" href="https://booking-115047.otelms.com"
@@ -185,7 +186,7 @@
     <div class="hdr-in"><a class="logo" href="index.html"><img class="logo-mark" src="/images/webp/logos/zahid_inn_logo.webp" alt="Zahid Inn">Zahid Inn</a>
       <div class="hdr-right"><span class="social-links"><a class="social-icon-link" href="https://t.me/zahid-inn_hotel" target="_blank" rel="noopener" aria-label="Telegram"><img src="/images/webp/logos/telegram_logo.webp" alt="Telegram" width="38" height="38"></a><a class="social-icon-link" href="https://www.instagram.com/zahid.inn?igsi=aTdteXN6dnh5bXAz" target="_blank" rel="noopener" aria-label="Instagram"><img src="/images/webp/logos/instagram_logo.webp" alt="Instagram" width="38" height="38"></a></span><a class="btn btn-primary btn-sm" href="https://booking-115047.otelms.com" target="_blank"
           rel="noopener">Забронировать</a><a class="lang-switch" href="../en/contacts.html" title="English version"
-          hreflang="en">EN</a><button class="menu-btn" id="menu-btn"
+          hreflang="en">EN</a><button class="menu-btn" id="menu-btn" type="button" aria-controls="nav-overlay" aria-expanded="false"
           aria-label="Открыть меню"><span></span><span></span><span></span></button></div>
     </div>
   </header>
@@ -265,7 +266,7 @@
 <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">
-        <div class="footer-col"><a class="logo" href="index.html" style="margin-bottom:14px"><span
+        <div class="footer-col"><a class="logo" href="index.html"><span
               class="diamond"></span>Zahid Inn</a>
           <p>Отель на 20 номеров с двориком рядом с центром города.</p>
         </div>

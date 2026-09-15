@@ -123,6 +123,7 @@ body {
   display: inline-flex;
   align-items: center;
   line-height: 0;
+  position: relative;
 }
 .social-icon-link img {
   width: 38px;
@@ -137,6 +138,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 38px;
   height: 38px;
   border: 1.5px solid var(--ink);
@@ -160,6 +162,7 @@ body {
   font-family: ui-monospace, monospace;
 }
 .menu-btn {
+  position: relative;
   width: 42px;
   height: 42px;
   display: flex;
@@ -187,11 +190,16 @@ body {
   justify-content: flex-end;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s;
+  /* visibility (not just opacity) keeps the closed menu out of the tab order
+     and out of the accessibility tree */
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0s linear 0.25s;
 }
 .nav-overlay.open {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
+  transition: opacity 0.25s, visibility 0s;
 }
 .nav-panel {
   width: 340px;
@@ -216,8 +224,8 @@ body {
   margin-bottom: 24px;
 }
 .nav-close {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border: 1.5px solid var(--ink);
   border-radius: 2px;
   background: none;
@@ -479,4 +487,70 @@ section {
 address {
   font-style: normal;
   margin: 0;
+}
+
+
+/* Skip link — first tab stop, jumps past the header into <main>.
+   Visually hidden until focused. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  padding: 12px 20px;
+  background: var(--ink);
+  color: var(--cream);
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-size: var(--fs-sm);
+  text-decoration: none;
+  border-radius: 0 0 2px 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* Always show a focus ring for keyboard users. */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--terra);
+  outline-offset: 2px;
+}
+
+
+/* Replaces the two inline style="" attributes these elements used to carry,
+   so the CSP can forbid inline styles outright. */
+.footer-col .logo {
+  margin-bottom: 14px;
+}
+.nav-top .disp {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+/* Touch targets.
+   The header controls are drawn at 38-42px to suit the design. This grows the
+   *hit area* to the 48px minimum with a centred transparent overlay, leaving
+   both the layout and the visible size unchanged.
+   .nav-close is excluded: it already uses ::before AND ::after to draw its X,
+   so it is simply sized up instead — it sits in the drawer, where there is room. */
+.social-icon-link,
+.lang-switch,
+.menu-btn,
+.nav-close {
+  touch-action: manipulation;
+}
+.social-icon-link::after,
+.lang-switch::after,
+.menu-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  min-width: 48px;
+  min-height: 48px;
 }

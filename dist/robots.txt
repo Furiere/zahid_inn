@@ -2,4 +2,7 @@
 User-agent: *
 Allow: /
 
+# Structured summary for LLM and agent crawlers.
+# LLM-Content: https://zahid-inn.uz/llms.txt
+
 Sitemap: https://zahid-inn.uz/sitemap.xml
