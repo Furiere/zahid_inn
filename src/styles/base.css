@@ -474,3 +474,9 @@ section {
     justify-content: center;
   }
 }
+
+/* <address> is used for the hotel's NAP block — drop the UA italics */
+address {
+  font-style: normal;
+  margin: 0;
+}

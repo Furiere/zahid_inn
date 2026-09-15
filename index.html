@@ -1,14 +1,78 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Zahid Inn</title>
-<script>
-  var target = navigator.language && navigator.language.toLowerCase().startsWith('ru') ? '/ru/' : '/en/';
-  location.replace(target);
-</script>
-</head>
-<body>
-<p><a href="/en/">English</a> · <a href="/ru/">Русский</a></p>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zahid Inn — Boutique Hotel in Tashkent</title>
+    <meta
+      name="description"
+      content="Zahid Inn is a 20-room boutique courtyard hotel near the centre of Tashkent, Uzbekistan. Choose your language: English or Russian."
+    />
+    <link rel="canonical" href="https://zahid-inn.uz/en/" />
+    <link rel="alternate" hreflang="en" href="https://zahid-inn.uz/en/" />
+    <link rel="alternate" hreflang="ru" href="https://zahid-inn.uz/ru/" />
+    <link rel="alternate" hreflang="x-default" href="https://zahid-inn.uz/en/" />
+    <link rel="icon" type="image/webp" href="/images/webp/logos/zahid_inn_logo.webp" />
+    <link rel="apple-touch-icon" href="/images/jpg/logos/Logo.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zahid Inn" />
+    <meta property="og:title" content="Zahid Inn — Boutique Hotel in Tashkent" />
+    <meta
+      property="og:description"
+      content="A 20-room boutique courtyard hotel near the centre of Tashkent, Uzbekistan."
+    />
+    <meta property="og:url" content="https://zahid-inn.uz/" />
+    <meta property="og:image" content="https://zahid-inn.uz/images/jpg/patio/patio_1.jpg" />
+    <meta property="og:image:alt" content="The shaded courtyard patio at Zahid Inn, Tashkent" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Work Sans", system-ui, sans-serif;
+        color: #3a3129;
+        background: #fff;
+        text-align: center;
+      }
+      main { padding: 32px; }
+      h1 { font-weight: 600; font-size: 28px; margin: 0 0 8px; }
+      p { color: #6b6157; margin: 0 0 24px; }
+      a.lang {
+        display: inline-block;
+        margin: 0 6px;
+        padding: 10px 22px;
+        border: 1.5px solid currentColor;
+        border-radius: 2px;
+        text-decoration: none;
+        color: #3a3129;
+      }
+    </style>
+    <script>
+      var target =
+        navigator.language && navigator.language.toLowerCase().indexOf("ru") === 0
+          ? "/ru/"
+          : "/en/";
+      location.replace(target);
+    </script>
+  </head>
+  <body>
+    <!--
+      Crawlers that do not run the redirect above still get a real page:
+      a description of the hotel and crawlable links into both language trees.
+    -->
+    <main>
+      <h1>Zahid Inn</h1>
+      <p>
+        A 20-room boutique courtyard hotel near the centre of Tashkent, Uzbekistan.<br />
+        Choose your language — Выберите язык
+      </p>
+      <a class="lang" href="/en/" hreflang="en">English</a>
+      <a class="lang" href="/ru/" hreflang="ru" lang="ru">Русский</a>
+    </main>
+  </body>
 </html>

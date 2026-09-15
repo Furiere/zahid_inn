@@ -1,0 +1,5 @@
+# https://zahid-inn.uz/robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://zahid-inn.uz/sitemap.xml
