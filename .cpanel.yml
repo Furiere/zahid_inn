@@ -1,9 +1,9 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/zahidinn/public_html/dev
-    # `cp -R dist/*` alone silently skips dotfiles, which would leave
-    # dist/.htaccess (security headers, staging noindex, caching) undeployed.
-    # The second copy picks up exactly those.
-    - /bin/cp -R dist/* $DEPLOYPATH
-    - /bin/cp -R dist/.[!.]* $DEPLOYPATH
+    - export PROD=/home/zahidinn/public_html
+    - export DEV=/home/zahidinn/public_html/dev
+    - /bin/cp -R dist/* $PROD
+    - /bin/cp -R dist/.[!.]* $PROD
+    - /bin/cp -R dist/* $DEV
+    - /bin/cp -R dist/.[!.]* $DEV
