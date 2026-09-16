@@ -653,59 +653,6 @@ section > .wrap {
   max-width: 68ch;
 }
 
-.offer-popup {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 320px;
-  background: var(--cream);
-  border: 1.5px solid var(--ink);
-  border-radius: 2px;
-  box-shadow: 0 12px 32px oklch(20% 0.02 55 / 0.18);
-  padding: 24px;
-  z-index: 200;
-  transform: translateY(0);
-  transition:
-    transform 0.3s,
-    opacity 0.3s;
-}
-.offer-popup.hidden {
-  transform: translateY(24px);
-  opacity: 0;
-  pointer-events: none;
-}
-.offer-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 26px;
-  height: 26px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: var(--fs-sm);
-  color: var(--inksoft);
-}
-.offer-tag {
-  font-size: var(--fs-base);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--terra);
-  font-weight: 600;
-  margin: 0 0 10px;
-}
-.offer-popup h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: var(--fs-lg);
-  margin: 0 0 10px;
-  font-weight: 600;
-}
-.offer-popup p {
-  font-size: var(--fs-h2);
-  color: var(--inksoft);
-  margin: 0 0 16px;
-  line-height: 1.5;
-}
 @media (max-width: 900px) {
   .hero-in {
     grid-template-columns: 1fr;
@@ -756,12 +703,6 @@ section > .wrap {
   section {
     padding: 56px 0;
   }
-  .offer-popup {
-    left: 16px;
-    right: 16px;
-    width: auto;
-    bottom: 16px;
-  }
   .hero-search {
     flex-direction: column;
   }
@@ -774,15 +715,5 @@ section > .wrap {
   }
   .trust-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-/* Keep the promo popup clear of the cookie disclaimer while it is showing */
-body.cookie-visible .offer-popup {
-  bottom: 140px;
-}
-@media (max-width: 720px) {
-  body.cookie-visible .offer-popup {
-    bottom: 190px;
   }
 }
